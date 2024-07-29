@@ -2,28 +2,60 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{biblatex}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry} 
+\definecolor{highlight_color}{HTML}{6C3483}
+\newcommand{\highlight}[1]{\textbf{\textcolor{highlight_color}{#1}}}
+
+% Set paragraph formatting
+\setlength{\parindent}{0pt}         % Remove indent
+\setlength{\parskip}{\baselineskip} % Add line skip
+
+% Add references
 \addbibresource{references.bib}
-\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}  %For centering solution box
-\lhead{Leaft Header\\}
-\rhead{Right Header\\}
-% \chead{\hline} % Un-comment to draw line below header
-\thispagestyle{empty}   %For removing header/footer from page 1
 
 \begin{document}
 
-\begingroup  
-    \centering
-    \large Introduction to Reinforcement Learning in PyTorch \cite{medium}\\
-    % \LARGE Assignment Number\\[0.5em]
-    % \large \today\\[0.5em]
-    \large Ricardo Ramautar\par
-    \large Roll Number\par
-    \large Class/Batch/Section\par
-\endgroup
+\section*{Introduction to Reinforcement Learning in PyTorch\cite{medium}}
 \rule{\textwidth}{0.4pt}
-\pointsdroppedatright   %Self-explanatory
-\printanswers
-\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}   %Replace "Ans:" with starting keyword in solution box
+
+\section{Basics of Reinforcement Learning}
+\begin{figure}[h]
+    \centering
+    \caption{\cite{agent_env}}
+    \includegraphics[width=0.5\textwidth]{images/agent_environment.png}
+\end{figure}
+RL algorithms are often modeled as Markov Decision Processes. Hence, at time step $t$, the \highlight{agent} (RL algorithm) is situated in \highlight{state} $s_t$. The agent interacts with an environment by taking an \highlight{action} $a_t$. This action results in a new state $s_{t+1}$ and the transition $(s_t, a_t)$ brings with it a \highlight{reward} $r_t$.
+Often times, there is a probability distribution over the transition $(s_t, a_t)$ to a new state $s_{t+1}$. Additionally, there often exist \highlight{episode-ending states}, which corresponds to reaching a final goal. Your goal is to learn a \highlight{policy} $\pi$ that maps states to actions.
+
+Although, in an MDP, we assume that we can always tell which state $s_t$ our agents is in, this isn't always the case. In these cases, we have observations $o_t$.
+
+\section{Notes}
+We always know the state of the agent $\rightarrow$ no observations necessary.
+
+\newpage
+\section{Notation}
+\begin{center}
+    \begin{tabular}{ | m{2em} | m{2cm}| } 
+      \hline
+      $a$ & Action \\ 
+      \hline
+      $r$ & Reward \\ 
+      \hline
+      cell7 & cell8 \\
+      \hline
+    \end{tabular}
+    \end{center}
+
+\section{Definitions}
+\highlight{Episode}: The trajectory of going from start to finish of a task.
+
+
+% \pointsdroppedatright   %Self-explanatory
+% \printanswers
+% \renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}   %Replace "Ans:" with starting keyword in solution box
 
 % \begin{questions}
 
@@ -57,6 +89,7 @@
     
 % \end{questions}
 
+\newpage
 \printbibliography[title={References}]
 
 

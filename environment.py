@@ -4,6 +4,8 @@ import pandas as pd
 import yfinance as yf
 import matplotlib.pyplot as plt
 
+from TradeDatabase import TradeDatabase
+
 # Global variables
 START_DATE  = "2020-1-1"     # y-m-d-hr-min-sec
 END_DATE    = "2024-1-1"     # y-m-d-hr-min-sec
@@ -32,6 +34,8 @@ class BTC:
 
         self.btc_prices, self.dates = self.get_price_data()
 
+        self.trade_history = TradeDatabase()
+
     def get_price_data(self):
         btc = yf.download("BTC-USD", 
                           start     = self.start_date, 
@@ -45,3 +49,6 @@ class BTC:
         dates = [time.date() for time in dates]
 
         return avg_prices, dates
+    
+    def get_price(self, t):
+        return self.btc_prices[t]

@@ -11,3 +11,4 @@ RL Theory/RL Theory.synctex.gz
 images/
 images/*
 test.ipynb
+__pycache__/environment.cpython-310.pyc

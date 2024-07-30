@@ -12,3 +12,6 @@ images/
 images/*
 test.ipynb
 __pycache__/environment.cpython-310.pyc
+__pycache__/
+__pycache__/*
+

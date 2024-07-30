@@ -1,5 +1,3 @@
-import numpy as np
-
 class Trade:
     def __init__(self, price, fee, commission, date):
         self.buy_price  = price
@@ -7,11 +5,11 @@ class Trade:
         self.commission = commission
         self.buy_date   = date
 
-        self.amount
-        self.buy_value
-        self.cost
-        self.sell_date
-        self.reward
+        self.amount     = None
+        self.buy_value  = None
+        self.cost       = None
+        self.sell_date  = None
+        self.reward     = None
 
     def buy(self, amount):
         self.amount     = amount

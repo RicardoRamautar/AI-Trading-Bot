@@ -72,6 +72,7 @@ class BTC:
         else:
             self.trade_history.add_open_trade(trade)
             assets -= trade.cost
+            return 0
     
     def sell(self):
         if not self.trade_history:
@@ -81,6 +82,20 @@ class BTC:
            reward = self.trade_history.close_trade(self.trade_history.open_trade.buy_date)
 
            return reward
+        
+    def wait(self):
+        return 0
+    
+    def update(self, action):
+        self.t += 1
+        if action == 'buy':
+            self.buy(self.t)
+        elif action == 'sell':
+            self.sell()
+        elif action == 'wait':
+            self.wait()
+        else:
+            print("ERROR: An unknown action is sent!")
 
 
     

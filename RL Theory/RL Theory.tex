@@ -28,23 +28,37 @@
     \includegraphics[width=0.5\textwidth]{images/agent_environment.png}
 \end{figure}
 RL algorithms are often modeled as Markov Decision Processes. Hence, at time step $t$, the \highlight{agent} (RL algorithm) is situated in \highlight{state} $s_t$. The agent interacts with an environment by taking an \highlight{action} $a_t$. This action results in a new state $s_{t+1}$ and the transition $(s_t, a_t)$ brings with it a \highlight{reward} $r_t$.
-Often times, there is a probability distribution over the transition $(s_t, a_t)$ to a new state $s_{t+1}$. Additionally, there often exist \highlight{episode-ending states}, which corresponds to reaching a final goal. Your goal is to learn a \highlight{policy} $\pi$ that maps states to actions.
+Often times, there is a probability distribution over the transition $(s_t, a_t)$ to a new state $s_{t+1}$. Hence, each transition has a certain probability of ending up in each state. Additionally, there often exist \highlight{episode-ending states}, which corresponds to reaching a final goal. Your goal is to learn a \highlight{policy} $\pi$ that maps states to actions. Although, in an MDP, we assume that we can always tell which state $s_t$ our agents is in, this isn't always the case. In these cases, we have observations $o_t$. The goal of an agent is to maximize the total reward $R$. Therefore, it is important to ensure that the reward actually captures the true goal we want the agent to achieve/learn. 
 
-Although, in an MDP, we assume that we can always tell which state $s_t$ our agents is in, this isn't always the case. In these cases, we have observations $o_t$.
+% \section{Discount factor}
+Often times, you want the agent to achieve its goal as soon as possible. In this case, one can apply the concept of \highlight{discounted rewards}: decreasing the reward that the agent receives over time to stimulate the agent to solve the problem as fast as possible. This is done by a time-dependent multiplicative term $\gamma^t$. With discounting then, the agent's goal is to maximize
+\begin{equation}
+  \mathbb{E}[\sum_{t=0}^\infty \gamma^t r_t]
+\end{equation}
 
 \section{Notes}
 We always know the state of the agent $\rightarrow$ no observations necessary.
 
+The only episode-ending state is when the assets of the agent becomes non-positive.
+
+We do not want to use a discount factor, since it does not matter for a trading bot whether it makes a lot of money at time $t$ or at time $t+1$.
+
+
+
 \newpage
 \section{Notation}
 \begin{center}
-    \begin{tabular}{ | m{2em} | m{2cm}| } 
+    \begin{tabular}{ | m{5em} | m{12cm}| } 
       \hline
-      $a$ & Action \\ 
+      $a_t$ & Action taken at time $t$. \\ 
       \hline
-      $r$ & Reward \\ 
+      $r_t$ & Reward received by agent at time $t$. \\ 
       \hline
-      cell7 & cell8 \\
+      $s_t$ & State of the agent at time $t$. \\
+      \hline
+      $(s_t, a_t)$ & Transition from state $s_t$ by taking action $a_t$, resulting in reward $r_t$. \\
+      \hline
+      $R$ & Total reward \\
       \hline
     \end{tabular}
     \end{center}

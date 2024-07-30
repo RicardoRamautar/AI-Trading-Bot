@@ -1,8 +1,6 @@
 # Modules
 import numpy as np
-import pandas as pd
 import yfinance as yf
-import matplotlib.pyplot as plt
 
 from Trade import Trade
 from TradeDatabase import TradeDatabase
@@ -11,17 +9,17 @@ from TradeDatabase import TradeDatabase
 START_DATE  = "2020-1-1"     # y-m-d-hr-min-sec
 END_DATE    = "2024-1-1"     # y-m-d-hr-min-sec
 INTERVAL    = "1d"
-ASSETS      = 1000      # Current portfolio value in USD
+CAPITAL     = 1000      # Current portfolio value in USD
 FEE         = 0.006     # Max buy/sell fee at Coinbase
 COMMISSION  = 0.1       # Commission on profits (made up)
 
 # Class
-class BTC:
+class Environment:
     def __init__(self, 
                  start_date = START_DATE, 
                  end_date   = END_DATE,
                  interval   = INTERVAL,
-                 assets     = ASSETS, 
+                 capital     = CAPITAL, 
                  fee        = FEE,
                  commission = COMMISSION):
         
@@ -29,7 +27,7 @@ class BTC:
         self.end_date   = end_date
         self.interval   = interval
         self.t          = 0
-        self.assets     = assets
+        self.capital     = capital
         self.fee        = fee
         self.commission = commission
 
@@ -57,29 +55,32 @@ class BTC:
     def get_price(self, t):
         return self.btc_prices[t]
     
-    def buy(self, date):
-        price = self.get_price(date)
-        trade = Trade(price, self.fee, self.commission, date)
+    def buy(self, t):
+        price = self.get_price(t)
+        trade = Trade(price, self.fee, self.commission, t)
 
         trade.buy()
         
-        if trade.buy_value > self.assets:
+        if trade.cost > self.capital:
             print("ERROR: Cannot spend more than you have!")
             return -1
-        elif self.trade_history:
-            print("ERROR: Can only hold one trade at a time!")
+        elif self.trade_history.open_trades:
+            print("ERROR: Can only have one open trade at a time!")
             return -1
         else:
             self.trade_history.add_open_trade(trade)
-            assets -= trade.cost
+            capital -= trade.cost
             return 0
     
     def sell(self):
+        price = self.get_price(self.t)
         if not self.trade_history:
             print("ERROR: You have no open trades to sell!")
             return -1
         else:
-           reward = self.trade_history.close_trade(self.trade_history.open_trade.buy_date)
+           reward, trade_return = self.trade_history.close_trade(self.trade_history.open_trade,
+                                                   price, self.t)
+           self.capital += trade_return
 
            return reward
         
@@ -88,14 +89,22 @@ class BTC:
     
     def update(self, action):
         self.t += 1
+        reward = 0
         if action == 'buy':
-            self.buy(self.t)
+            reward = self.buy(self.t)
         elif action == 'sell':
-            self.sell()
+            reward = self.sell()
         elif action == 'wait':
-            self.wait()
+            reward = self.wait()
         else:
             print("ERROR: An unknown action is sent!")
+        
+        if self.t == len(self.dates) - 1:
+            pass
+        if self.capital <= 0:
+            pass
+
+        return reward
 
 
     

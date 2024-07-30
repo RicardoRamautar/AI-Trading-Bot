@@ -8,6 +8,9 @@ class TradeDatabase:
     def add_open_trade(self, trade):
         self.open_trade = trade
 
-    def close_trade(self, trade):
+    def close_trade(self, trade, price, date):
         self.open_trade = None
+        trade.sell(price, date)
         self.closed_trades[trade.buy_date] = trade
+
+        return trade.reward, 

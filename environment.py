@@ -9,7 +9,7 @@ from TradeDatabase import TradeDatabase
 START_DATE  = "2020-1-1"     # y-m-d-hr-min-sec
 END_DATE    = "2024-1-1"     # y-m-d-hr-min-sec
 INTERVAL    = "1d"
-CAPITAL     = 1000      # Current portfolio value in USD
+CAPITAL     = 20000     # Current portfolio value in USD
 FEE         = 0.006     # Max buy/sell fee at Coinbase
 COMMISSION  = 0.1       # Commission on profits (made up)
 
@@ -19,7 +19,7 @@ class Environment:
                  start_date = START_DATE, 
                  end_date   = END_DATE,
                  interval   = INTERVAL,
-                 capital     = CAPITAL, 
+                 capital    = CAPITAL, 
                  fee        = FEE,
                  commission = COMMISSION):
         
@@ -27,11 +27,11 @@ class Environment:
         self.end_date   = end_date
         self.interval   = interval
         self.t          = 0
-        self.capital     = capital
+        self.capital    = capital
         self.fee        = fee
         self.commission = commission
 
-        self.btc_prices, self.dates = self.get_price_data()
+        self.prices, self.dates = self.get_price_data()
 
         self.trade_history = TradeDatabase()
 
@@ -53,13 +53,14 @@ class Environment:
         return avg_prices, dates
     
     def get_price(self, t):
-        return self.btc_prices[t]
+        return self.prices[t]
     
-    def buy(self, t):
+    def __buy(self, amount):
+        t = self.t
         price = self.get_price(t)
         trade = Trade(price, self.fee, self.commission, t)
 
-        trade.buy()
+        trade.buy(amount)
         
         if trade.cost > self.capital:
             print("ERROR: Cannot spend more than you have!")
@@ -69,10 +70,10 @@ class Environment:
             return -1
         else:
             self.trade_history.add_open_trade(trade)
-            capital -= trade.cost
+            self.capital -= trade.cost
             return 0
     
-    def sell(self):
+    def __sell(self):
         price = self.get_price(self.t)
         if not self.trade_history:
             print("ERROR: You have no open trades to sell!")
@@ -84,18 +85,18 @@ class Environment:
 
            return reward
         
-    def wait(self):
+    def __wait(self):
         return 0
     
-    def update(self, action):
-        self.t += 1
+    def update(self, action=0, amount=1):
+        """0: Wait - 1: Buy - 2: Sell"""
         reward = 0
-        if action == 'buy':
-            reward = self.buy(self.t)
-        elif action == 'sell':
-            reward = self.sell()
-        elif action == 'wait':
-            reward = self.wait()
+        if action == 1:
+            reward = self.__buy(amount)
+        elif action == 2:
+            reward = self.__sell()
+        elif action == 0:
+            reward = self.__wait()
         else:
             print("ERROR: An unknown action is sent!")
         
@@ -103,6 +104,8 @@ class Environment:
             pass
         if self.capital <= 0:
             pass
+
+        self.t += 1
 
         return reward
 

@@ -3,7 +3,7 @@ import numpy as np
 import yfinance as yf
 
 from Trade import Trade
-from TradeDatabase import TradeDatabase
+# from TradeDatabase import TradeDatabase
 
 # Global variables
 START_DATE  = "2020-1-1"     # y-m-d-hr-min-sec
@@ -30,10 +30,11 @@ class Environment:
         self.capital    = capital
         self.fee        = fee
         self.commission = commission
+        
+        self.open_trade     = None
+        self.closed_trades  = {}
 
         self.prices, self.dates = self.get_price_data()
-
-        self.trade_history = TradeDatabase()
 
     def reset(self):
         self.__init__()
@@ -54,6 +55,16 @@ class Environment:
     
     def get_price(self, t):
         return self.prices[t]
+
+    def __add_open_trade(self, trade):
+        self.open_trade = trade
+
+    def __close_trade(self, trade, price, date):
+        # self.open_trade = None
+        trade.sell(price, date)
+        self.closed_trades[trade.buy_date] = trade
+
+        return trade.reward
     
     def __buy(self, amount):
         t = self.t
@@ -65,21 +76,21 @@ class Environment:
         if trade.cost > self.capital:
             print("ERROR: Cannot spend more than you have!")
             return -1
-        elif self.trade_history.open_trades:
+        elif self.open_trade:
             print("ERROR: Can only have one open trade at a time!")
             return -1
         else:
-            self.trade_history.add_open_trade(trade)
+            self.__add_open_trade(trade)
             self.capital -= trade.cost
             return 0
     
     def __sell(self):
         price = self.get_price(self.t)
-        if not self.trade_history:
+        if not self.open_trade:
             print("ERROR: You have no open trades to sell!")
             return -1
         else:
-           reward, trade_return = self.trade_history.close_trade(self.trade_history.open_trade,
+           reward, trade_return = self.__close_trade(self.open_trade,
                                                    price, self.t)
            self.capital += trade_return
 

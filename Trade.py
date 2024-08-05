@@ -16,7 +16,6 @@ class Trade:
         self.amount     = amount
         self.buy_value  = self.buy_price * self.amount
         self.cost       = self.buy_value * (1 + self.fee)
-        print(self.cost)
 
     def sell(self, price, t):
         self.sell_date = t

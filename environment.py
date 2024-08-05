@@ -30,7 +30,7 @@ class Environment:
         self.capital    = capital
         self.fee        = fee
         self.commission = commission
-        
+
         self.open_trade     = None
         self.closed_trades  = {}
 
@@ -59,12 +59,13 @@ class Environment:
     def __add_open_trade(self, trade):
         self.open_trade = trade
 
-    def __close_trade(self, trade, price, date):
-        # self.open_trade = None
-        trade.sell(price, date)
-        self.closed_trades[trade.buy_date] = trade
+    def __close_trade(self):
+        price = self.get_price(self.t)
+        reward, trade_return = self.open_trade.sell(price, self.t)
+        self.closed_trades[self.open_trade.buy_date] = self.open_trade
+        self.open_trade = None
 
-        return trade.reward
+        return reward, trade_return
     
     def __buy(self, amount):
         t = self.t
@@ -85,13 +86,12 @@ class Environment:
             return 0
     
     def __sell(self):
-        price = self.get_price(self.t)
+        # price = self.get_price(self.t)
         if not self.open_trade:
             print("ERROR: You have no open trades to sell!")
             return -1
         else:
-           reward, trade_return = self.__close_trade(self.open_trade,
-                                                   price, self.t)
+           reward, trade_return = self.__close_trade()
            self.capital += trade_return
 
            return reward

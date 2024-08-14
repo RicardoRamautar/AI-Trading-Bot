@@ -14,5 +14,6 @@ test.ipynb
 __pycache__/environment.cpython-310.pyc
 __pycache__/
 __pycache__/*
-
 RL Book.pdf
+
+**/PricePrediction - standard/.venv/

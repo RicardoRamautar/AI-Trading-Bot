@@ -21,6 +21,8 @@ class DataProcessing():
         self.y_norm = None
         self.train_loader = None
         self.val_loader = None
+        self.in_scaler = MinMaxScaler()
+        self.out_scaler = MinMaxScaler()
 
     def get_process_data(self):
         self.get_price_data()
@@ -29,7 +31,7 @@ class DataProcessing():
 
     def get_price_data(self):
         # Get data
-        df = yf.download("BTC-USD", start="2017-1-1", end="2024-1-1", interval="1d")
+        df = yf.download("BTC-USD", start="2017-1-1", end="2024-8-1", interval="1d")
 
         # Get list of closing prices
         closing_prices = list(df.iloc[:, 3])
@@ -66,24 +68,23 @@ class DataProcessing():
 
         return self.X_train, self.y_train, self.X_test, self.y_test
     
-    def normalize(self, X, y, input_scaler=MinMaxScaler(), 
-                  output_scaler=MinMaxScaler(), fit=0):
+    def normalize(self, X, y, fit=0):
         # Reshape training data to 2D for normalization
         X_reshaped = X.reshape(-1, X.shape[-1])  # shape: (nr_train_sequences * sequence_length, nr_of_features)
         y_reshaped = y.reshape(-1, y.shape[-1])  # shape: (nr_train_sequences * sequence_length, nr_of_features)
 
         if fit == 1:
             # Fit scaler to training data and transform training data
-            X_normalized = input_scaler.fit_transform(X_reshaped)
-            y_normalized = output_scaler.fit_transform(y_reshaped)
+            X_normalized = self.in_scaler.fit_transform(X_reshaped)
+            y_normalized = self.out_scaler.fit_transform(y_reshaped)
             
             if np.min(X_normalized) < 0: print(f'Value smaller than 0: {np.min(X_normalized)}')
             if np.max(X_normalized) > 1: print(f'Value greater than 1: {np.min(X_normalized)}')
 
         else:
             # Transform test data
-            X_normalized = input_scaler.transform(X_reshaped)
-            y_normalized = output_scaler.transform(y_reshaped)
+            X_normalized = self.in_scaler.transform(X_reshaped)
+            y_normalized = self.out_scaler.transform(y_reshaped)
 
         # Reshape back to 3D
         X_normalized = X_normalized.reshape(X.shape)
@@ -93,15 +94,23 @@ class DataProcessing():
         self.X_norm = torch.tensor(X_normalized, dtype=torch.float32)
         self.y_norm = torch.tensor(y_normalized, dtype=torch.float32)
 
-        return self.X_norm, self.y_norm, input_scaler, output_scaler
+        return self.X_norm, self.y_norm
     
-    def create_fold_sets(self, train_indices, val_indices):
+    def create_fold_sets(self):
+        shuffled_indices = np.arange(len(self.X_train))
+        random.shuffle(shuffled_indices)
+
+        nr_val = int(len(self.X_train) * 0.3)
+
+        val_indices = shuffled_indices[:nr_val]
+        train_indices = shuffled_indices[nr_val:]
+
         # Normalize Training and Validation sets
         X_train_fold, y_train_fold  = self.X_train[train_indices], self.y_train[train_indices]
         X_val_fold, y_val_fold      = self.X_train[val_indices], self.y_train[val_indices]
 
-        X_train_fold, y_train_fold, in_scaler, out_scaler = self.normalize(X_train_fold, y_train_fold, fit=1)
-        X_val_fold, y_val_fold, _, _ = self.normalize(X_val_fold, y_val_fold, in_scaler, out_scaler, fit=0)
+        X_train_fold, y_train_fold   = self.normalize(X_train_fold, y_train_fold, fit=1)
+        X_val_fold, y_val_fold, _, _ = self.normalize(X_val_fold, y_val_fold, fit=0)
 
         # Combine inputs and labels
         train_dataset_fold  = TensorDataset(X_train_fold, y_train_fold)

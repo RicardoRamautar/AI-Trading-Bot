@@ -1,0 +1,956 @@
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completed
+
+----------------
+Configuration 0
+Learning rate: 0.01
+hidden size:   16
+fc features:   64
+lstm layers:   2
+
+epoch 0 | validation loss: 0.05916757260759672 | time per epoch: 0.01604525566101074
+epoch 25 | validation loss: 0.0003067460396171858 | time per epoch: 0.4148603916168213
+epoch 50 | validation loss: 0.0001882500970774951 | time per epoch: 0.41282154083251954
+epoch 75 | validation loss: 0.00016766293750454983 | time per epoch: 0.40790518760681155
+epoch 100 | validation loss: 0.000163725926540792 | time per epoch: 0.40015360832214353
+epoch 125 | validation loss: 0.000161556088035771 | time per epoch: 0.4066040229797363
+epoch 150 | validation loss: 0.000161556088035771 | time per epoch: 0.4166225719451904
+epoch 175 | validation loss: 0.000161556088035771 | time per epoch: 0.41424954414367676
+epoch 200 | validation loss: 0.000161556088035771 | time per epoch: 0.42017757415771484
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 577.7879028320312
+
+
+
+----------------
+Configuration 1
+Learning rate: 0.01
+hidden size:   16
+fc features:   64
+lstm layers:   4
+
+epoch 0 | validation loss: 0.0677254597345988 | time per epoch: 0.016212949752807616
+epoch 25 | validation loss: 0.00036350011941976845 | time per epoch: 0.4275724506378174
+epoch 50 | validation loss: 0.00023537873736737916 | time per epoch: 0.42259031295776367
+epoch 75 | validation loss: 0.00017010729061439633 | time per epoch: 0.42719475746154784
+epoch 100 | validation loss: 0.00016547977187049886 | time per epoch: 0.4195775699615478
+epoch 125 | validation loss: 0.00016038622804141292 | time per epoch: 0.4100875186920166
+epoch 150 | validation loss: 0.00015743622740653032 | time per epoch: 0.4314554595947266
+epoch 175 | validation loss: 0.0001565009709641648 | time per epoch: 0.42907377243041994
+epoch 200 | validation loss: 0.0001565009709641648 | time per epoch: 0.42791842460632323
+epoch 225 | validation loss: 0.00015474365136469714 | time per epoch: 0.42657363891601563
+epoch 250 | validation loss: 0.00015281772599943602 | time per epoch: 0.42761113166809084
+epoch 275 | validation loss: 0.00015281772599943602 | time per epoch: 0.4262384414672852
+epoch 300 | validation loss: 0.00015281772599943602 | time per epoch: 0.414573974609375
+epoch 325 | validation loss: 0.00015281772599943602 | time per epoch: 0.43077377319335936
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 570.9971923828125
+
+
+
+----------------
+Configuration 2
+Learning rate: 0.01
+hidden size:   16
+fc features:   64
+lstm layers:   6
+
+epoch 0 | validation loss: 0.08054400732119878 | time per epoch: 0.025421257019042968
+epoch 25 | validation loss: 0.02156519362082084 | time per epoch: 0.4170722675323486
+epoch 50 | validation loss: 0.02156519362082084 | time per epoch: 0.44004231452941894
+epoch 75 | validation loss: 0.02156519362082084 | time per epoch: 0.44202939987182616
+epoch 100 | validation loss: 0.0009878386044874787 | time per epoch: 0.44306044578552245
+epoch 125 | validation loss: 0.00037159711549368996 | time per epoch: 0.44275187492370605
+epoch 150 | validation loss: 0.00027290943641370785 | time per epoch: 0.4417315101623535
+epoch 175 | validation loss: 0.0002437194101124381 | time per epoch: 0.44543296813964844
+epoch 200 | validation loss: 0.0002165841384946058 | time per epoch: 0.44886658668518065
+epoch 225 | validation loss: 0.00020874812131902823 | time per epoch: 0.4339595127105713
+epoch 250 | validation loss: 0.00020874812131902823 | time per epoch: 0.43122488975524903
+epoch 275 | validation loss: 0.00020874812131902823 | time per epoch: 0.4495571327209473
+epoch 300 | validation loss: 0.00020874812131902823 | time per epoch: 0.4439766597747803
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 584.856689453125
+
+
+
+----------------
+Configuration 3
+Learning rate: 0.01
+hidden size:   16
+fc features:   64
+lstm layers:   8
+
+epoch 0 | validation loss: 0.07501563181479771 | time per epoch: 0.017864370346069337
+epoch 25 | validation loss: 0.005045889721562465 | time per epoch: 0.46209092140197755
+epoch 50 | validation loss: 0.004326711952065428 | time per epoch: 0.4550300693511963
+epoch 75 | validation loss: 0.003503367149581512 | time per epoch: 0.443858757019043
+epoch 100 | validation loss: 0.0028362225275486708 | time per epoch: 0.45843460083007814
+epoch 125 | validation loss: 0.0005086380697321147 | time per epoch: 0.45859963417053223
+epoch 150 | validation loss: 0.00037050957325845957 | time per epoch: 0.45985888481140136
+epoch 175 | validation loss: 0.00034733902430161834 | time per epoch: 0.4620390033721924
+epoch 200 | validation loss: 0.00033645374545206624 | time per epoch: 0.4621082019805908
+epoch 225 | validation loss: 0.00032080062859070796 | time per epoch: 0.46556170463562013
+epoch 250 | validation loss: 0.0003105682796255375 | time per epoch: 0.459717903137207
+epoch 275 | validation loss: 0.0003029559932959576 | time per epoch: 0.46716822624206544
+epoch 300 | validation loss: 0.0003029559932959576 | time per epoch: 0.4675461959838867
+epoch 325 | validation loss: 0.00029770815550970536 | time per epoch: 0.4662539672851562
+epoch 350 | validation loss: 0.0002971234983609368 | time per epoch: 0.4664840793609619
+epoch 375 | validation loss: 0.0002865523905105268 | time per epoch: 0.4670794773101807
+epoch 400 | validation loss: 0.0002865523905105268 | time per epoch: 0.4664599800109863
+epoch 425 | validation loss: 0.000281847237298886 | time per epoch: 0.463511266708374
+epoch 450 | validation loss: 0.0002804351388476789 | time per epoch: 0.4741467380523682
+epoch 475 | validation loss: 0.0002763474816068386 | time per epoch: 0.46749300956726075
+epoch 500 | validation loss: 0.0002763474816068386 | time per epoch: 0.47673567771911624
+epoch 525 | validation loss: 0.00026872781745623797 | time per epoch: 0.478752498626709
+epoch 550 | validation loss: 0.0002560407107618327 | time per epoch: 0.48148093223571775
+epoch 575 | validation loss: 0.0002560407107618327 | time per epoch: 0.47619967460632323
+epoch 600 | validation loss: 0.0002485590133195122 | time per epoch: 0.4732720375061035
+epoch 625 | validation loss: 0.0002471857490794112 | time per epoch: 0.48105772972106936
+epoch 650 | validation loss: 0.0002471857490794112 | time per epoch: 0.48186305046081546
+epoch 675 | validation loss: 0.00023290620689901212 | time per epoch: 0.48236592292785646
+epoch 700 | validation loss: 0.00023290620689901212 | time per epoch: 0.4848824596405029
+epoch 725 | validation loss: 0.00023290620689901212 | time per epoch: 0.4817103958129883
+epoch 750 | validation loss: 0.00022902073154303557 | time per epoch: 0.4883005332946777
+epoch 775 | validation loss: 0.00022691389312967658 | time per epoch: 0.4887410831451416
+epoch 800 | validation loss: 0.00022691389312967658 | time per epoch: 0.4894715881347656
+epoch 825 | validation loss: 0.00022691389312967658 | time per epoch: 0.49190550804138183
+epoch 850 | validation loss: 0.0002256340958410874 | time per epoch: 0.48512434005737304
+epoch 875 | validation loss: 0.00020464191038627177 | time per epoch: 0.4892172050476074
+epoch 900 | validation loss: 0.00018174059126370898 | time per epoch: 0.49145458221435545
+epoch 925 | validation loss: 0.00017006913064202914 | time per epoch: 0.49993720054626467
+epoch 950 | validation loss: 0.00016569467697991058 | time per epoch: 0.4935127067565918
+epoch 975 | validation loss: 0.00014912291953805834 | time per epoch: 0.49143266677856445
+epoch 1000 | validation loss: 0.00014912291953805834 | time per epoch: 0.48995227813720704
+epoch 1025 | validation loss: 0.00013812191173201427 | time per epoch: 0.4945667839050293
+epoch 1050 | validation loss: 0.00013812191173201427 | time per epoch: 0.4996819019317627
+epoch 1075 | validation loss: 0.00013584600674221292 | time per epoch: 0.5008456230163574
+epoch 1100 | validation loss: 0.00013584600674221292 | time per epoch: 0.5012510299682618
+epoch 1125 | validation loss: 0.00013584600674221292 | time per epoch: 0.4967631435394287
+epoch 1150 | validation loss: 0.00013584600674221292 | time per epoch: 0.5080470466613769
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 397.62432861328125
+
+
+
+----------------
+Configuration 4
+Learning rate: 0.01
+hidden size:   32
+fc features:   64
+lstm layers:   2
+
+epoch 0 | validation loss: 0.011520180851221085 | time per epoch: 0.01944864273071289
+epoch 25 | validation loss: 0.0002677057054825127 | time per epoch: 0.49453763008117674
+epoch 50 | validation loss: 0.00019956439306649068 | time per epoch: 0.4967516613006592
+epoch 75 | validation loss: 0.0001918166041529427 | time per epoch: 0.49516680717468264
+epoch 100 | validation loss: 0.0001898214929193879 | time per epoch: 0.5097816467285157
+epoch 125 | validation loss: 0.00018644525941150883 | time per epoch: 0.9216938781738281
+epoch 150 | validation loss: 0.0001862528151832521 | time per epoch: 0.9512492084503174
+epoch 175 | validation loss: 0.0001852308875337864 | time per epoch: 0.4967132568359375
+epoch 200 | validation loss: 0.00018334104000435522 | time per epoch: 0.4968411636352539
+epoch 225 | validation loss: 0.00018334104000435522 | time per epoch: 0.4934285354614258
+epoch 250 | validation loss: 0.00018334104000435522 | time per epoch: 0.49899824142456056
+epoch 275 | validation loss: 0.00018207229247006276 | time per epoch: 0.5037475872039795
+epoch 300 | validation loss: 0.00018084489177757254 | time per epoch: 0.5014230537414551
+epoch 325 | validation loss: 0.00018084489177757254 | time per epoch: 0.5017871570587158
+epoch 350 | validation loss: 0.00018084489177757254 | time per epoch: 0.5016171169281006
+epoch 375 | validation loss: 0.00018084489177757254 | time per epoch: 0.5022315597534179
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 624.4923706054688
+
+
+
+----------------
+Configuration 5
+Learning rate: 0.01
+hidden size:   32
+fc features:   64
+lstm layers:   4
+
+epoch 0 | validation loss: 0.07664485275745392 | time per epoch: 0.020084543228149412
+epoch 25 | validation loss: 0.00039125777160127956 | time per epoch: 0.5174031257629395
+epoch 50 | validation loss: 0.00027473371301312 | time per epoch: 0.5180177402496338
+epoch 75 | validation loss: 0.00023741184850223362 | time per epoch: 0.5266872024536133
+epoch 100 | validation loss: 0.00023284599592443556 | time per epoch: 0.5321238708496093
+epoch 125 | validation loss: 0.00023284599592443556 | time per epoch: 0.5287990474700928
+epoch 150 | validation loss: 0.00023284599592443556 | time per epoch: 0.5170486831665039
+epoch 175 | validation loss: 0.00023284599592443556 | time per epoch: 0.5198322677612305
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 660.3611450195312
+
+
+
+----------------
+Configuration 6
+Learning rate: 0.01
+hidden size:   32
+fc features:   64
+lstm layers:   6
+
+epoch 0 | validation loss: 0.07441230366627376 | time per epoch: 0.020441541671752928
+epoch 25 | validation loss: 0.00029340924811549485 | time per epoch: 0.5313132667541504
+epoch 50 | validation loss: 0.00023377209436148405 | time per epoch: 0.5323506450653076
+epoch 75 | validation loss: 0.00020058338122908026 | time per epoch: 0.5407220268249512
+epoch 100 | validation loss: 0.00019443591979021826 | time per epoch: 0.543902587890625
+epoch 125 | validation loss: 0.0001925455071614124 | time per epoch: 0.5423899745941162
+epoch 150 | validation loss: 0.0001925455071614124 | time per epoch: 0.534913158416748
+epoch 175 | validation loss: 0.0001891153491063354 | time per epoch: 0.5380908203125
+epoch 200 | validation loss: 0.0001891153491063354 | time per epoch: 0.5407848834991456
+epoch 225 | validation loss: 0.0001757564847745622 | time per epoch: 0.5370480823516846
+epoch 250 | validation loss: 0.0001757564847745622 | time per epoch: 0.5360528373718262
+epoch 275 | validation loss: 0.0001757564847745622 | time per epoch: 0.5391187572479248
+epoch 300 | validation loss: 0.0001757564847745622 | time per epoch: 0.5415429878234863
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 518.55859375
+
+
+
+----------------
+Configuration 7
+Learning rate: 0.01
+hidden size:   32
+fc features:   64
+lstm layers:   8
+
+epoch 0 | validation loss: 0.06851057211558025 | time per epoch: 0.023569211959838868
+epoch 25 | validation loss: 0.06812280416488647 | time per epoch: 0.5550492668151855
+epoch 50 | validation loss: 0.053687376280625664 | time per epoch: 0.547147855758667
+epoch 75 | validation loss: 0.053687376280625664 | time per epoch: 0.5515625
+epoch 100 | validation loss: 0.053687376280625664 | time per epoch: 0.5528462028503418
+epoch 125 | validation loss: 0.053687376280625664 | time per epoch: 0.5490281295776367
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 13403.3369140625
+
+
+
+----------------
+Configuration 8
+Learning rate: 0.01
+hidden size:   48
+fc features:   64
+lstm layers:   2
+
+epoch 0 | validation loss: 0.008946979728837809 | time per epoch: 0.026697072982788086
+epoch 25 | validation loss: 0.00029351624349753064 | time per epoch: 0.5554057598114014
+epoch 50 | validation loss: 0.0002300312917213887 | time per epoch: 0.5449317455291748
+epoch 75 | validation loss: 0.00021641965819677958 | time per epoch: 0.5415620517730713
+epoch 100 | validation loss: 0.00021641965819677958 | time per epoch: 0.5341820621490478
+epoch 125 | validation loss: 0.0002107004499218116 | time per epoch: 0.5406832695007324
+epoch 150 | validation loss: 0.00020590959563075253 | time per epoch: 0.5368420600891113
+epoch 175 | validation loss: 0.0002039601628590996 | time per epoch: 0.5462802505493164
+epoch 200 | validation loss: 0.0002039601628590996 | time per epoch: 0.5467630386352539
+epoch 225 | validation loss: 0.0002039601628590996 | time per epoch: 0.548887243270874
+epoch 250 | validation loss: 0.0002039601628590996 | time per epoch: 0.5471967506408691
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 608.4923095703125
+
+
+
+----------------
+Configuration 9
+Learning rate: 0.01
+hidden size:   48
+fc features:   64
+lstm layers:   4
+
+epoch 0 | validation loss: 0.0927530253926913 | time per epoch: 0.03005824089050293
+epoch 25 | validation loss: 0.000280172952140371 | time per epoch: 0.5726208209991455
+epoch 50 | validation loss: 0.00019082385551882908 | time per epoch: 0.5630142784118652
+epoch 75 | validation loss: 0.00017930083170843622 | time per epoch: 0.5620262813568115
+epoch 100 | validation loss: 0.00017858034698292613 | time per epoch: 0.562812271118164
+epoch 125 | validation loss: 0.0001697032421361655 | time per epoch: 0.5649011802673339
+epoch 150 | validation loss: 0.00016944536522108442 | time per epoch: 0.5663943195343017
+epoch 175 | validation loss: 0.00016944536522108442 | time per epoch: 0.5738226127624512
+epoch 200 | validation loss: 0.00016944536522108442 | time per epoch: 0.5812233161926269
+epoch 225 | validation loss: 0.00016944536522108442 | time per epoch: 0.5675307941436768
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 698.620361328125
+
+
+
+----------------
+Configuration 10
+Learning rate: 0.01
+hidden size:   48
+fc features:   64
+lstm layers:   6
+
+epoch 0 | validation loss: 0.10539764414230983 | time per epoch: 0.02309502601623535
+epoch 25 | validation loss: 0.022293496256073315 | time per epoch: 0.5916087913513184
+epoch 50 | validation loss: 0.022293496256073315 | time per epoch: 0.614168586730957
+epoch 75 | validation loss: 0.022293496256073315 | time per epoch: 0.6049066925048828
+epoch 100 | validation loss: 0.022293496256073315 | time per epoch: 0.5977892303466796
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 7843.37158203125
+
+
+
+----------------
+Configuration 11
+Learning rate: 0.01
+hidden size:   48
+fc features:   64
+lstm layers:   8
+
+epoch 0 | validation loss: 0.07582727322975795 | time per epoch: 0.02391961097717285
+epoch 25 | validation loss: 0.019798920800288517 | time per epoch: 0.6129090118408204
+epoch 50 | validation loss: 0.019798920800288517 | time per epoch: 0.6173406219482422
+epoch 75 | validation loss: 0.019798920800288517 | time per epoch: 0.6394378757476806
+epoch 100 | validation loss: 0.019798920800288517 | time per epoch: 0.6219175148010254
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 8564.458984375
+
+
+
+----------------
+Configuration 12
+Learning rate: 0.01
+hidden size:   60
+fc features:   64
+lstm layers:   2
+
+epoch 0 | validation loss: 0.06205833703279495 | time per epoch: 0.022641925811767577
+epoch 25 | validation loss: 0.0003276268932192276 | time per epoch: 0.5719368648529053
+epoch 50 | validation loss: 0.00030837833279899013 | time per epoch: 0.5775384616851806
+epoch 75 | validation loss: 0.00029447232373058796 | time per epoch: 0.576289234161377
+epoch 100 | validation loss: 0.00029447232373058796 | time per epoch: 0.6068831062316895
+epoch 125 | validation loss: 0.00029258364035437506 | time per epoch: 0.5778837490081787
+epoch 150 | validation loss: 0.00029258364035437506 | time per epoch: 0.576597204208374
+epoch 175 | validation loss: 0.00029258364035437506 | time per epoch: 0.5804495525360107
+epoch 200 | validation loss: 0.00029258364035437506 | time per epoch: 0.5796553421020508
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 587.0970458984375
+
+
+
+----------------
+Configuration 13
+Learning rate: 0.01
+hidden size:   60
+fc features:   64
+lstm layers:   4
+
+epoch 0 | validation loss: 0.08246192584435146 | time per epoch: 0.02379476547241211
+epoch 25 | validation loss: 0.0002937925164587796 | time per epoch: 0.5998533535003662
+epoch 50 | validation loss: 0.00018794783197032908 | time per epoch: 0.6200677680969239
+epoch 75 | validation loss: 0.00017607035503412286 | time per epoch: 0.607486743927002
+epoch 100 | validation loss: 0.00017607035503412286 | time per epoch: 0.6047341346740722
+epoch 125 | validation loss: 0.00017466342736346027 | time per epoch: 0.5986106014251709
+epoch 150 | validation loss: 0.00017163411636526385 | time per epoch: 0.6042937088012695
+epoch 175 | validation loss: 0.00016969643669047704 | time per epoch: 0.6319433689117432
+epoch 200 | validation loss: 0.00016969643669047704 | time per epoch: 0.6072185039520264
+epoch 225 | validation loss: 0.00016886187465085337 | time per epoch: 0.5993619060516358
+epoch 250 | validation loss: 0.00016886187465085337 | time per epoch: 0.607777099609375
+epoch 275 | validation loss: 0.00016886187465085337 | time per epoch: 0.6242280578613282
+epoch 300 | validation loss: 0.00016817286571798226 | time per epoch: 0.6121857166290283
+epoch 325 | validation loss: 0.00016817286571798226 | time per epoch: 0.6039150905609131
+epoch 350 | validation loss: 0.00016817286571798226 | time per epoch: 0.6096365547180176
+epoch 375 | validation loss: 0.00016647333298654607 | time per epoch: 0.6162374210357666
+epoch 400 | validation loss: 0.0001634570119980102 | time per epoch: 0.7537652969360351
+epoch 425 | validation loss: 0.00015646304624776045 | time per epoch: 1.0967112731933595
+epoch 450 | validation loss: 0.00014844545512460172 | time per epoch: 1.0687462711334228
+epoch 475 | validation loss: 0.00014844545512460172 | time per epoch: 0.6339712810516357
+epoch 500 | validation loss: 0.00014844545512460172 | time per epoch: 0.6217180728912354
+epoch 525 | validation loss: 0.00014844545512460172 | time per epoch: 0.6199156761169433
+epoch 550 | validation loss: 0.00014085446552295858 | time per epoch: 0.6172334003448486
+epoch 575 | validation loss: 0.00013868645570861796 | time per epoch: 0.6428479194641114
+epoch 600 | validation loss: 0.00013834490285565457 | time per epoch: 0.6287220764160156
+epoch 625 | validation loss: 0.00013834490285565457 | time per epoch: 0.6280596542358399
+epoch 650 | validation loss: 0.00013281425587289655 | time per epoch: 0.622095775604248
+epoch 675 | validation loss: 0.0001271845151980718 | time per epoch: 0.6551603221893311
+epoch 700 | validation loss: 0.00011549049304449 | time per epoch: 0.627650899887085
+epoch 725 | validation loss: 0.00010503525421275602 | time per epoch: 0.6296426582336426
+epoch 750 | validation loss: 0.00010503525421275602 | time per epoch: 0.6339420127868652
+epoch 775 | validation loss: 0.00010503525421275602 | time per epoch: 0.6461167240142822
+epoch 800 | validation loss: 0.00010027214617972884 | time per epoch: 0.6266808891296387
+epoch 825 | validation loss: 0.00010027214617972884 | time per epoch: 0.6306868839263916
+epoch 850 | validation loss: 0.00010027214617972884 | time per epoch: 0.654823226928711
+epoch 875 | validation loss: 9.595615726235944e-05 | time per epoch: 0.6346863842010498
+epoch 900 | validation loss: 9.595615726235944e-05 | time per epoch: 0.6315391635894776
+epoch 925 | validation loss: 9.595615726235944e-05 | time per epoch: 0.6410999298095703
+epoch 950 | validation loss: 9.369774973796059e-05 | time per epoch: 0.6517107582092285
+epoch 975 | validation loss: 9.369774973796059e-05 | time per epoch: 0.6389343547821045
+epoch 1000 | validation loss: 9.369774973796059e-05 | time per epoch: 0.6372216606140136
+epoch 1025 | validation loss: 9.369774973796059e-05 | time per epoch: 0.6652969264984131
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 248.22715759277344
+
+
+
+----------------
+Configuration 14
+Learning rate: 0.01
+hidden size:   60
+fc features:   64
+lstm layers:   6
+
+epoch 0 | validation loss: 0.07073330630858739 | time per epoch: 0.026067142486572267
+epoch 25 | validation loss: 0.05254329368472099 | time per epoch: 0.6738044643402099
+epoch 50 | validation loss: 0.05254329368472099 | time per epoch: 0.6985465717315674
+epoch 75 | validation loss: 0.05254329368472099 | time per epoch: 0.6767488670349121
+epoch 100 | validation loss: 0.05254329368472099 | time per epoch: 0.6765050125122071
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 14267.1357421875
+
+
+
+----------------
+Configuration 15
+Learning rate: 0.01
+hidden size:   60
+fc features:   64
+lstm layers:   8
+
+epoch 0 | validation loss: 0.06150676434238752 | time per epoch: 0.030792417526245116
+epoch 25 | validation loss: 0.004363046648601691 | time per epoch: 0.6908508396148682
+epoch 50 | validation loss: 0.004363046648601691 | time per epoch: 0.6929768466949463
+epoch 75 | validation loss: 0.004163718471924464 | time per epoch: 0.7093715476989746
+epoch 100 | validation loss: 0.003974931236977379 | time per epoch: 0.6915768909454346
+epoch 125 | validation loss: 0.0037996021565049887 | time per epoch: 0.7139341068267823
+epoch 150 | validation loss: 0.00061818677932024 | time per epoch: 0.6922875785827637
+epoch 175 | validation loss: 0.000257615441417632 | time per epoch: 0.7116852855682373
+epoch 200 | validation loss: 0.0002280931075802073 | time per epoch: 0.7049343204498291
+epoch 225 | validation loss: 0.00021215705783106387 | time per epoch: 0.6970806503295899
+epoch 250 | validation loss: 0.00021215705783106387 | time per epoch: 0.718949089050293
+epoch 275 | validation loss: 0.0001800433771374325 | time per epoch: 0.7004539489746093
+epoch 300 | validation loss: 0.0001800433771374325 | time per epoch: 0.7222702598571777
+epoch 325 | validation loss: 0.00016283801232930273 | time per epoch: 0.7011195468902588
+epoch 350 | validation loss: 0.0001588379091117531 | time per epoch: 0.7120460796356202
+epoch 375 | validation loss: 0.00014520071514804536 | time per epoch: 0.7220967769622803
+epoch 400 | validation loss: 0.0001383675953547936 | time per epoch: 0.6996641159057617
+epoch 425 | validation loss: 0.0001244083141500596 | time per epoch: 0.7292934417724609
+epoch 450 | validation loss: 0.00011238943867889854 | time per epoch: 0.7036709022521973
+epoch 475 | validation loss: 0.00011238943867889854 | time per epoch: 0.7326351070404052
+epoch 500 | validation loss: 0.00011238943867889854 | time per epoch: 0.7109384441375732
+epoch 525 | validation loss: 0.00011047476194410895 | time per epoch: 0.7336624240875245
+epoch 550 | validation loss: 0.00010501350273746841 | time per epoch: 0.7168243217468262
+epoch 575 | validation loss: 0.00010501350273746841 | time per epoch: 0.7315543556213379
+epoch 600 | validation loss: 0.00010501350273746841 | time per epoch: 0.7205304336547852
+epoch 625 | validation loss: 0.00010501350273746841 | time per epoch: 0.7257430744171143
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 321.2774658203125
+
+
+
+----------------
+Configuration 16
+Learning rate: 0.01
+hidden size:   16
+fc features:   96
+lstm layers:   2
+
+epoch 0 | validation loss: 0.0387910840411981 | time per epoch: 0.025947742462158203
+epoch 25 | validation loss: 0.00025800416672912735 | time per epoch: 0.6690097236633301
+epoch 50 | validation loss: 0.0001840823630724723 | time per epoch: 0.6709353065490723
+epoch 75 | validation loss: 0.00017029623753235987 | time per epoch: 0.6895402431488037
+epoch 100 | validation loss: 0.00016753007366787642 | time per epoch: 0.6736249351501464
+epoch 125 | validation loss: 0.00016451318030400822 | time per epoch: 0.6826661491394043
+epoch 150 | validation loss: 0.00016384968330385163 | time per epoch: 0.6866989517211914
+epoch 175 | validation loss: 0.00016384968330385163 | time per epoch: 0.6733583164215088
+epoch 200 | validation loss: 0.00016384968330385163 | time per epoch: 0.7039516544342042
+epoch 225 | validation loss: 0.00016173400217667222 | time per epoch: 0.6810882759094238
+epoch 250 | validation loss: 0.0001610410399734974 | time per epoch: 0.6734190177917481
+epoch 275 | validation loss: 0.0001610410399734974 | time per epoch: 0.7001907730102539
+epoch 300 | validation loss: 0.0001610410399734974 | time per epoch: 0.6746903133392333
+epoch 325 | validation loss: 0.0001610410399734974 | time per epoch: 0.7012968444824219
+epoch 350 | validation loss: 0.00015935627258537957 | time per epoch: 0.6876226329803466
+epoch 375 | validation loss: 0.00015935627258537957 | time per epoch: 0.6811436080932617
+epoch 400 | validation loss: 0.00015935627258537957 | time per epoch: 0.7097123146057129
+epoch 425 | validation loss: 0.00015935627258537957 | time per epoch: 0.6811270999908448
+epoch 450 | validation loss: 0.0001592877039608235 | time per epoch: 0.7060286426544189
+epoch 475 | validation loss: 0.00015911541170983887 | time per epoch: 0.6943409252166748
+epoch 500 | validation loss: 0.00015842394592861334 | time per epoch: 0.6869606304168702
+epoch 525 | validation loss: 0.00015842394592861334 | time per epoch: 0.7156296920776367
+epoch 550 | validation loss: 0.00015842394592861334 | time per epoch: 0.6980848979949951
+epoch 575 | validation loss: 0.00015842394592861334 | time per epoch: 0.7256039142608642
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 600.5503540039062
+
+
+
+----------------
+Configuration 17
+Learning rate: 0.01
+hidden size:   16
+fc features:   96
+lstm layers:   4
+
+epoch 0 | validation loss: 0.07050654540459315 | time per epoch: 0.027700366973876952
+epoch 25 | validation loss: 0.0006959383220722278 | time per epoch: 0.7071251964569092
+epoch 50 | validation loss: 0.0003431740284819777 | time per epoch: 0.7372394466400146
+epoch 75 | validation loss: 0.0002565092678802709 | time per epoch: 0.7170611953735352
+epoch 100 | validation loss: 0.0002004010796857377 | time per epoch: 0.732176685333252
+epoch 125 | validation loss: 0.00018164327047998086 | time per epoch: 0.7076337051391601
+epoch 150 | validation loss: 0.00015745367272756994 | time per epoch: 0.7110382843017579
+epoch 175 | validation loss: 0.00015348798964017382 | time per epoch: 0.7257168388366699
+epoch 200 | validation loss: 0.00015341567389744645 | time per epoch: 0.70801025390625
+epoch 225 | validation loss: 0.00015076963002987517 | time per epoch: 0.7342490100860596
+epoch 250 | validation loss: 0.0001498599085607566 | time per epoch: 0.714730281829834
+epoch 275 | validation loss: 0.0001498599085607566 | time per epoch: 0.7354769992828369
+epoch 300 | validation loss: 0.0001498599085607566 | time per epoch: 0.7152955055236816
+epoch 325 | validation loss: 0.0001498599085607566 | time per epoch: 0.7438846778869629
+epoch 350 | validation loss: 0.00014794141558619836 | time per epoch: 0.7183387565612793
+epoch 375 | validation loss: 0.00014794141558619836 | time per epoch: 0.7462639904022217
+epoch 400 | validation loss: 0.00014794141558619836 | time per epoch: 0.7203938865661621
+epoch 425 | validation loss: 0.00014794141558619836 | time per epoch: 0.73223313331604
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 533.2476196289062
+
+
+
+----------------
+Configuration 18
+Learning rate: 0.01
+hidden size:   16
+fc features:   96
+lstm layers:   6
+
+epoch 0 | validation loss: 0.08294971535603206 | time per epoch: 0.02846369743347168
+epoch 25 | validation loss: 0.019589252149065334 | time per epoch: 0.75646409034729
+epoch 50 | validation loss: 0.005243115437527497 | time per epoch: 0.7360892391204834
+epoch 75 | validation loss: 0.00040113616463107366 | time per epoch: 0.7578291606903076
+epoch 100 | validation loss: 0.0003244718003164356 | time per epoch: 0.7346440696716309
+epoch 125 | validation loss: 0.00031558977207168937 | time per epoch: 0.9703159809112549
+epoch 150 | validation loss: 0.00031558977207168937 | time per epoch: 1.0703886127471924
+epoch 175 | validation loss: 0.0003042496246052906 | time per epoch: 0.7626143836975098
+epoch 200 | validation loss: 0.00029975441672528785 | time per epoch: 0.7498050212860108
+epoch 225 | validation loss: 0.0002972229412989691 | time per epoch: 0.7539444828033447
+epoch 250 | validation loss: 0.00029247634423275787 | time per epoch: 0.7578845596313477
+epoch 275 | validation loss: 0.0002916170924436301 | time per epoch: 0.755364007949829
+epoch 300 | validation loss: 0.00028310774359852076 | time per epoch: 0.7709241771697998
+epoch 325 | validation loss: 0.00028310774359852076 | time per epoch: 0.7475680160522461
+epoch 350 | validation loss: 0.0002762491349130869 | time per epoch: 0.7707121086120605
+epoch 375 | validation loss: 0.0002762491349130869 | time per epoch: 0.7527656650543213
+epoch 400 | validation loss: 0.00026421162571447593 | time per epoch: 0.7731756591796874
+epoch 425 | validation loss: 0.00026421162571447593 | time per epoch: 0.7527146434783936
+epoch 450 | validation loss: 0.00025977080319232 | time per epoch: 0.7863780498504639
+epoch 475 | validation loss: 0.00025757887730530155 | time per epoch: 0.7537386798858643
+epoch 500 | validation loss: 0.00025757887730530155 | time per epoch: 0.777516393661499
+epoch 525 | validation loss: 0.0002527289664916073 | time per epoch: 0.7564132213592529
+epoch 550 | validation loss: 0.0002519375605819126 | time per epoch: 0.7852902030944824
+epoch 575 | validation loss: 0.0002519375605819126 | time per epoch: 0.7719654083251953
+epoch 600 | validation loss: 0.0002519375605819126 | time per epoch: 0.7730583190917969
+epoch 625 | validation loss: 0.0002519375605819126 | time per epoch: 0.7825780582427978
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 538.06396484375
+
+
+
+----------------
+Configuration 19
+Learning rate: 0.01
+hidden size:   16
+fc features:   96
+lstm layers:   8
+
+epoch 0 | validation loss: 0.07720782111088435 | time per epoch: 0.031069812774658204
+epoch 25 | validation loss: 0.07587586343288422 | time per epoch: 0.78879150390625
+epoch 50 | validation loss: 0.07587586343288422 | time per epoch: 0.7762328147888183
+epoch 75 | validation loss: 0.07587586343288422 | time per epoch: 0.7978824996948242
+epoch 100 | validation loss: 0.07587586343288422 | time per epoch: 0.7730777931213378
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 15624.033203125
+
+
+
+----------------
+Configuration 20
+Learning rate: 0.01
+hidden size:   32
+fc features:   96
+lstm layers:   2
+
+epoch 0 | validation loss: 0.0642944226662318 | time per epoch: 0.029869651794433592
+epoch 25 | validation loss: 0.00023531147356455526 | time per epoch: 0.7578513813018799
+epoch 50 | validation loss: 0.00017306663600417474 | time per epoch: 0.7822485637664794
+epoch 75 | validation loss: 0.0001606555791416516 | time per epoch: 0.7635087203979493
+epoch 100 | validation loss: 0.00014734161959495395 | time per epoch: 0.7935781383514404
+epoch 125 | validation loss: 0.00014734161959495395 | time per epoch: 0.7649427604675293
+epoch 150 | validation loss: 0.00014435488265007734 | time per epoch: 0.7767783641815186
+epoch 175 | validation loss: 0.00014435488265007734 | time per epoch: 0.7767317867279053
+epoch 200 | validation loss: 0.00014355605526361614 | time per epoch: 0.7722716426849365
+epoch 225 | validation loss: 0.00014355605526361614 | time per epoch: 0.8281573390960694
+epoch 250 | validation loss: 0.00014146398946953317 | time per epoch: 0.7884368991851807
+epoch 275 | validation loss: 0.00014091063349042088 | time per epoch: 0.8238683128356934
+epoch 300 | validation loss: 0.00014091063349042088 | time per epoch: 0.8516938209533691
+epoch 325 | validation loss: 0.00014091063349042088 | time per epoch: 0.8047644710540771
+epoch 350 | validation loss: 0.00014091063349042088 | time per epoch: 0.825450086593628
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 520.4442749023438
+
+
+
+----------------
+Configuration 21
+Learning rate: 0.01
+hidden size:   32
+fc features:   96
+lstm layers:   4
+
+epoch 0 | validation loss: 0.07250545173883438 | time per epoch: 0.03097431182861328
+epoch 25 | validation loss: 0.003483374215041598 | time per epoch: 0.8235352230072022
+epoch 50 | validation loss: 0.0003491860309926172 | time per epoch: 0.809650011062622
+epoch 75 | validation loss: 0.0002411892880142356 | time per epoch: 0.8000604629516601
+epoch 100 | validation loss: 0.00021511647112978002 | time per epoch: 0.8195635318756104
+epoch 125 | validation loss: 0.00021217279330206415 | time per epoch: 0.797920331954956
+epoch 150 | validation loss: 0.00021027530116649965 | time per epoch: 0.8196443462371826
+epoch 175 | validation loss: 0.00021027530116649965 | time per epoch: 0.8228881740570069
+epoch 200 | validation loss: 0.0002044316400618603 | time per epoch: 0.8016025352478028
+epoch 225 | validation loss: 0.00020163288960854212 | time per epoch: 0.8241294384002685
+epoch 250 | validation loss: 0.0002009572684376811 | time per epoch: 0.8106466865539551
+epoch 275 | validation loss: 0.00019980358774773777 | time per epoch: 0.81148832321167
+epoch 300 | validation loss: 0.00019980358774773777 | time per epoch: 0.814899377822876
+epoch 325 | validation loss: 0.00019980358774773777 | time per epoch: 0.8031971836090088
+epoch 350 | validation loss: 0.00019980358774773777 | time per epoch: 0.8126278591156005
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 638.8021850585938
+
+
+
+----------------
+Configuration 22
+Learning rate: 0.01
+hidden size:   32
+fc features:   96
+lstm layers:   6
+
+epoch 0 | validation loss: 0.06743748610218366 | time per epoch: 0.04487825393676758
+epoch 25 | validation loss: 0.00410009128972888 | time per epoch: 0.827338695526123
+epoch 50 | validation loss: 0.0037714222756524882 | time per epoch: 0.8347206497192383
+epoch 75 | validation loss: 0.0003289542510174215 | time per epoch: 0.837188720703125
+epoch 100 | validation loss: 0.0002005242082911233 | time per epoch: 0.8166100883483887
+epoch 125 | validation loss: 0.00019267020494832346 | time per epoch: 0.8426833724975586
+epoch 150 | validation loss: 0.00019267020494832346 | time per epoch: 0.844970703125
+epoch 175 | validation loss: 0.00019267020494832346 | time per epoch: 0.820457649230957
+epoch 200 | validation loss: 0.0001897965509366865 | time per epoch: 0.8462875175476074
+epoch 225 | validation loss: 0.0001897965509366865 | time per epoch: 0.8515374088287353
+epoch 250 | validation loss: 0.0001820005854824558 | time per epoch: 0.8260933113098144
+epoch 275 | validation loss: 0.00017734281330679855 | time per epoch: 0.8492569065093994
+epoch 300 | validation loss: 0.00017734281330679855 | time per epoch: 0.8518549728393555
+epoch 325 | validation loss: 0.00017734281330679855 | time per epoch: 0.8422242546081543
+epoch 350 | validation loss: 0.00017734281330679855 | time per epoch: 0.8761172008514404
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 623.6809692382812
+
+
+
+----------------
+Configuration 23
+Learning rate: 0.01
+hidden size:   32
+fc features:   96
+lstm layers:   8
+
+epoch 0 | validation loss: 0.060787989447514214 | time per epoch: 0.03353899955749512
+epoch 25 | validation loss: 0.05299281453092893 | time per epoch: 0.8786361694335938
+epoch 50 | validation loss: 0.05299281453092893 | time per epoch: 0.843477668762207
+epoch 75 | validation loss: 0.05299281453092893 | time per epoch: 0.8658300685882568
+epoch 100 | validation loss: 0.05299281453092893 | time per epoch: 0.8638061428070068
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 14729.1083984375
+
+
+
+----------------
+Configuration 24
+Learning rate: 0.01
+hidden size:   48
+fc features:   96
+lstm layers:   2
+
+epoch 0 | validation loss: 0.03412753840287527 | time per epoch: 0.033080825805664064
+epoch 25 | validation loss: 0.0002462823225262885 | time per epoch: 0.855311222076416
+epoch 50 | validation loss: 0.0001695654985572522 | time per epoch: 0.8487559127807617
+epoch 75 | validation loss: 0.00015577233716612682 | time per epoch: 0.8339552593231201
+epoch 100 | validation loss: 0.0001545892737340182 | time per epoch: 0.8559274482727051
+epoch 125 | validation loss: 0.00015063034758592644 | time per epoch: 0.8577488231658935
+epoch 150 | validation loss: 0.00015063034758592644 | time per epoch: 0.8316993808746338
+epoch 175 | validation loss: 0.00015063034758592644 | time per epoch: 0.8582170200347901
+epoch 200 | validation loss: 0.00015063034758592644 | time per epoch: 0.8545457458496094
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 630.9449462890625
+
+
+
+----------------
+Configuration 25
+Learning rate: 0.01
+hidden size:   48
+fc features:   96
+lstm layers:   4
+
+epoch 0 | validation loss: 0.07379873345295589 | time per epoch: 0.03451337814331055
+epoch 25 | validation loss: 0.0003986891921764861 | time per epoch: 0.8705378341674804
+epoch 50 | validation loss: 0.0002641495569453885 | time per epoch: 0.8729417705535889
+epoch 75 | validation loss: 0.00026173619941497844 | time per epoch: 0.8444153213500977
+epoch 100 | validation loss: 0.00026173619941497844 | time per epoch: 0.8710759735107422
+epoch 125 | validation loss: 0.00026173619941497844 | time per epoch: 0.8770161819458008
+epoch 150 | validation loss: 0.00026173619941497844 | time per epoch: 0.878016996383667
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 680.9686279296875
+
+
+
+----------------
+Configuration 26
+Learning rate: 0.01
+hidden size:   48
+fc features:   96
+lstm layers:   6
+
+epoch 0 | validation loss: 0.07001772026220958 | time per epoch: 0.03549984931945801
+epoch 25 | validation loss: 0.0032514117968579135 | time per epoch: 0.903291244506836
+epoch 50 | validation loss: 0.0002846742863766849 | time per epoch: 0.9000296783447266
+epoch 75 | validation loss: 0.00022435522017379603 | time per epoch: 0.9056308650970459
+epoch 100 | validation loss: 0.00022435522017379603 | time per epoch: 0.8901939296722412
+epoch 125 | validation loss: 0.0002192005340475589 | time per epoch: 0.8900478935241699
+epoch 150 | validation loss: 0.00020690727493880937 | time per epoch: 0.9005385112762451
+epoch 175 | validation loss: 0.00020690727493880937 | time per epoch: 0.8987364387512207
+epoch 200 | validation loss: 0.00020690727493880937 | time per epoch: 0.900916690826416
+epoch 225 | validation loss: 0.000198249239474535 | time per epoch: 0.8972445869445801
+epoch 250 | validation loss: 0.000198249239474535 | time per epoch: 0.8803459644317627
+epoch 275 | validation loss: 0.000198249239474535 | time per epoch: 0.9053365516662598
+epoch 300 | validation loss: 0.00019413651898503304 | time per epoch: 0.9102348136901856
+epoch 325 | validation loss: 0.00018991855904459953 | time per epoch: 0.9034244632720947
+epoch 350 | validation loss: 0.00016355416543471316 | time per epoch: 0.9171926784515381
+epoch 375 | validation loss: 0.00013489361299434677 | time per epoch: 0.904809103012085
+epoch 400 | validation loss: 0.00012566587732483944 | time per epoch: 0.8959233474731445
+epoch 425 | validation loss: 0.00012566587732483944 | time per epoch: 0.914173698425293
+epoch 450 | validation loss: 0.00011081090390992661 | time per epoch: 0.9131513214111329
+epoch 475 | validation loss: 0.00011081090390992661 | time per epoch: 0.9159192848205566
+epoch 500 | validation loss: 9.990371230135982e-05 | time per epoch: 0.9171504878997803
+epoch 525 | validation loss: 8.788164207847633e-05 | time per epoch: 0.9307388019561768
+epoch 550 | validation loss: 8.506056049858064e-05 | time per epoch: 0.9064709568023681
+epoch 575 | validation loss: 8.478032395942137e-05 | time per epoch: 0.9208618354797363
+epoch 600 | validation loss: 8.478032395942137e-05 | time per epoch: 0.9332090663909912
+epoch 625 | validation loss: 8.478032395942137e-05 | time per epoch: 0.9380504226684571
+epoch 650 | validation loss: 8.478032395942137e-05 | time per epoch: 0.933950605392456
+epoch 675 | validation loss: 8.185134432399839e-05 | time per epoch: 0.9350896739959716
+epoch 700 | validation loss: 8.185134432399839e-05 | time per epoch: 0.9384804248809815
+epoch 725 | validation loss: 8.185134432399839e-05 | time per epoch: 1.5456839275360108
+epoch 750 | validation loss: 8.185134432399839e-05 | time per epoch: 1.700296459197998
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 209.3398895263672
+
+
+
+----------------
+Configuration 27
+Learning rate: 0.01
+hidden size:   48
+fc features:   96
+lstm layers:   8
+
+epoch 0 | validation loss: 0.0767892450094223 | time per epoch: 0.038673477172851564
+epoch 25 | validation loss: 0.01656791940331459 | time per epoch: 0.9531836318969726
+epoch 50 | validation loss: 0.01656791940331459 | time per epoch: 0.9515112972259522
+epoch 75 | validation loss: 0.01656791940331459 | time per epoch: 0.9506574344635009
+epoch 100 | validation loss: 0.01656791940331459 | time per epoch: 0.9578578186035156
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 8237.1748046875
+
+
+
+----------------
+Configuration 28
+Learning rate: 0.01
+hidden size:   60
+fc features:   96
+lstm layers:   2
+
+epoch 0 | validation loss: 0.050014895697434746 | time per epoch: 0.03498234748840332
+epoch 25 | validation loss: 0.00024544081922310096 | time per epoch: 0.9164946842193603
+epoch 50 | validation loss: 0.00015702174035444236 | time per epoch: 0.898808479309082
+epoch 75 | validation loss: 0.00014713672377790013 | time per epoch: 0.9188650608062744
+epoch 100 | validation loss: 0.00014268259595458707 | time per epoch: 0.9203889465332031
+epoch 125 | validation loss: 0.00014268259595458707 | time per epoch: 0.9157435894012451
+epoch 150 | validation loss: 0.00014268259595458707 | time per epoch: 0.9208583927154541
+epoch 175 | validation loss: 0.00014268259595458707 | time per epoch: 0.9110452175140381
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 618.5001220703125
+
+
+
+----------------
+Configuration 29
+Learning rate: 0.01
+hidden size:   60
+fc features:   96
+lstm layers:   4
+
+epoch 0 | validation loss: 0.09646089375019073 | time per epoch: 0.03630096435546875
+epoch 25 | validation loss: 0.02552073262631893 | time per epoch: 0.9357131767272949
+epoch 50 | validation loss: 0.02552073262631893 | time per epoch: 0.9314681243896484
+epoch 75 | validation loss: 0.02552073262631893 | time per epoch: 0.9556619930267334
+epoch 100 | validation loss: 0.02552073262631893 | time per epoch: 0.9675256156921387
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 9708.8876953125
+
+
+
+----------------
+Configuration 30
+Learning rate: 0.01
+hidden size:   60
+fc features:   96
+lstm layers:   6
+
+epoch 0 | validation loss: 0.06677216788132985 | time per epoch: 0.03771681785583496
+epoch 25 | validation loss: 0.06639771660168965 | time per epoch: 1.0086707305908202
+epoch 50 | validation loss: 0.06639205788572629 | time per epoch: 1.0088047122955321
+epoch 75 | validation loss: 0.06639168163140614 | time per epoch: 1.0037952041625977
+epoch 100 | validation loss: 0.06639168163140614 | time per epoch: 1.0058213996887206
+epoch 125 | validation loss: 0.06639168163140614 | time per epoch: 1.0083019256591796
+epoch 150 | validation loss: 0.06639168163140614 | time per epoch: 1.0171974849700929
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 16551.513671875
+
+
+
+----------------
+Configuration 31
+Learning rate: 0.01
+hidden size:   60
+fc features:   96
+lstm layers:   8
+
+epoch 0 | validation loss: 0.06608037526408832 | time per epoch: 0.03986935615539551
+epoch 25 | validation loss: 0.05502993861834208 | time per epoch: 1.0374098777770997
+epoch 50 | validation loss: 0.05502993861834208 | time per epoch: 1.0330865001678466
+epoch 75 | validation loss: 0.05502993861834208 | time per epoch: 1.034207696914673
+epoch 100 | validation loss: 0.05502993861834208 | time per epoch: 1.0299935340881348
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 12308.9287109375
+
+
+
+----------------
+Configuration 32
+Learning rate: 0.01
+hidden size:   16
+fc features:   128
+lstm layers:   2
+
+epoch 0 | validation loss: 0.06795727461576462 | time per epoch: 0.04427151679992676
+epoch 25 | validation loss: 0.00028986366911946487 | time per epoch: 0.9711041736602783
+epoch 50 | validation loss: 0.00020256615243852139 | time per epoch: 0.9787188911437988
+epoch 75 | validation loss: 0.0001777553382756499 | time per epoch: 0.9779449558258057
+epoch 100 | validation loss: 0.0001642190254642628 | time per epoch: 0.9785040950775147
+epoch 125 | validation loss: 0.00016191978405307358 | time per epoch: 0.9824301528930665
+epoch 150 | validation loss: 0.0001607063750270754 | time per epoch: 0.981718692779541
+epoch 175 | validation loss: 0.0001586648795637302 | time per epoch: 0.9918223762512207
+epoch 200 | validation loss: 0.0001586648795637302 | time per epoch: 0.9974475479125977
+epoch 225 | validation loss: 0.00015713451163416417 | time per epoch: 0.9913747215270996
+epoch 250 | validation loss: 0.000155768945357219 | time per epoch: 0.9486015224456787
+epoch 275 | validation loss: 0.00015557274673483334 | time per epoch: 0.9500282669067383
+epoch 300 | validation loss: 0.00015440830247825943 | time per epoch: 0.9531079387664795
+epoch 325 | validation loss: 0.00015383315743141188 | time per epoch: 0.950400447845459
+epoch 350 | validation loss: 0.00015383315743141188 | time per epoch: 0.9519448852539063
+epoch 375 | validation loss: 0.00015307986662567905 | time per epoch: 0.9455897808074951
+epoch 400 | validation loss: 0.00015307986662567905 | time per epoch: 0.9447278881072998
+epoch 425 | validation loss: 0.0001521792025111305 | time per epoch: 0.9558859252929688
+epoch 450 | validation loss: 0.00015197279086957374 | time per epoch: 0.9580036640167237
+epoch 475 | validation loss: 0.00015197279086957374 | time per epoch: 0.9570159339904785
+epoch 500 | validation loss: 0.00015197279086957374 | time per epoch: 0.960631103515625
+epoch 525 | validation loss: 0.00015197279086957374 | time per epoch: 0.9637915515899658
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/rnn.py:911: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:1424.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+[*********************100%%**********************]  1 of 1 completed
+[*********************100%%**********************]  1 of 1 completedearly stopping!
+Average test error: 609.4390869140625
